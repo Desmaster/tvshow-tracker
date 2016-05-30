@@ -1,0 +1,33 @@
+# Project based directories/files
+/.buildpath
+/.cache
+/.gitattributes
+/.idea
+/.metadata
+/.project
+/.settings
+/libs
+/nbproject
+/var/*
+/vendor/*
+atlassian*
+
+# Auto generated hidden files
+.DS_Store
+.localized
+desktop.ini
+Thumbs.db
+
+# Configuration files
+/config.php
+
+# Temporary files
+*.bak
+*.tmp
+
+# Maintain folder structures
+!.gitkeep
+!.htaccess
+
+# Log files
+*.log
