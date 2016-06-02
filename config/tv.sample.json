@@ -1,0 +1,13 @@
+{
+    "tmdb": {
+        "username": "",
+        "password": "",
+        "apitoken": ""
+    },
+    "transmission": {
+        "host": "",
+        "endpoint": "",
+        "username": "",
+        "password": ""
+    }
+}

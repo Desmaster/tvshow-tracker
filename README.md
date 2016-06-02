@@ -31,17 +31,19 @@ Installation
 Run `composer install` or `composer update` if you're feeling lucky.
 
 **The Movie Database Account**
+
 - Create an account on [themoviedb.org](https://www.themoviedb.org/account/signup)
 - Log in and go to your account -> API -> Create the api key
 
 **Configuration**
-- Copy/paste `config.sample.php` to `config.php`
-- In the `config.php` fill in your [themoviedb.org](https://www.themoviedb.org) credentials and your api key under `tmdb`
+
+- Copy/paste `config/tv.sample.json` to `config/tv.json`
+- In the `config/tv.json` fill in your [themoviedb.org](https://www.themoviedb.org) credentials and your api key under `tmdb`
 - Then you fill in your tranmission-daemon details under `transmission`.
 
 How to use
 ------------
-Just run `php run.php`
+For now, run `php bin/console tv:sync`
 
 Requirements
 ------------
@@ -57,9 +59,8 @@ Compatibility
 
 Roadmap
 -------
-- Add console logging
+- Add console logging (In progress)
 - Add file logging
 - Add vault checking integration
 - Package on Packagist
-- Proper configuration
 - Write tests

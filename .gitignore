@@ -20,6 +20,8 @@ Thumbs.db
 
 # Configuration files
 /config.php
+/config/*
+!/config/*.sample.json
 
 # Temporary files
 *.bak

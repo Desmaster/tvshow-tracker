@@ -1,7 +1,11 @@
 <?php
 
-namespace Timpack\TvshowTracker;
+namespace Timpack\TvshowTracker\Core;
 
+use Guzzle\Http\Exception\CurlException;
+use LogicException;
+use Monolog\Logger;
+use Timpack\TvshowTracker\Tv\Helper\Helper;
 use TPB\API;
 use Vohof\Transmission;
 
@@ -37,15 +41,34 @@ class Docks
     protected $_cache = [];
 
     /**
-     * Docks constructor.
+     * @var array
      */
-    public function __construct($config)
+    protected $_config;
+
+    /**
+     * @var Logger
+     */
+    protected $_logger;
+
+    /**
+     * Docks constructor.
+     * @param $config
+     * @param Logger $logger
+     */
+    public function __construct($config, Logger $logger)
     {
+        $this->_config = $config;
+        $this->_logger = $logger;
+
         $this->_api = new API();
         $this->_helper = new Helper();
         $this->_transmission = new Transmission($config);
 
-        $this->_shipments = $this->fetchShipments();
+        try {
+            $this->_shipments = $this->fetchShipments();
+        } catch (CurlException $e) {
+            throw new LogicException('Failed to connect to Transmission. Check if your credentials are correct and if the server is running the specified port.');
+        }
     }
 
     /**

@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+if (PHP_SAPI !== 'cli') {
+    echo 'Warning: Console should be invoked via the CLI version of PHP, not the ' . PHP_SAPI . ' SAPI' . PHP_EOL;
+}
+
+require(__DIR__ . '/../vendor/autoload.php');
+
+$scriptFilename = $_SERVER['SCRIPT_FILENAME'];
+$packageRoot = dirname(dirname($scriptFilename));
+define('TPR', $packageRoot);
+
+use Symfony\Component\Console\Application;
+use Timpack\TvshowTracker\Core\Command\CommandRegistry;
+
+$application = new Application();
+
+$commandRegistry = CommandRegistry::getInstance()->getCommands();
+
+foreach($commandRegistry as $_commandClass) {
+    $application->add(new $_commandClass());
+}
+
+$application->run();

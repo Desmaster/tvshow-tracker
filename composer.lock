@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "db92f1cbb06a60d075802b8a4269358b",
-    "content-hash": "38a1ce1432e2337019c41abafe63c6c2",
+    "hash": "658fcac95352167e3542321b15535021",
+    "content-hash": "d324191cbf208e9abf994c7eaef2f371",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -806,6 +806,48 @@
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
             "time": "2016-05-03 17:50:52"
+        },
+        {
+            "name": "symfony/console",
+            "version": "2.0.7",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "e76444b1c5e78d40ea7658988a8051ef55d9684c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/e76444b1c5e78d40ea7658988a8051ef55d9684c",
+                "reference": "e76444b1c5e78d40ea7658988a8051ef55d9684c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2011-11-17 05:58:47"
         },
         {
             "name": "symfony/event-dispatcher",

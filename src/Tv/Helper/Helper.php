@@ -1,6 +1,6 @@
 <?php
 
-namespace Timpack\TvshowTracker;
+namespace Timpack\TvshowTracker\Tv\Helper;
 
 class Helper
 {

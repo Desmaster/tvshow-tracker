@@ -1,8 +1,9 @@
 <?php
 
-namespace Timpack\TvshowTracker;
+namespace Timpack\TvshowTracker\Core;
 
 use Symfony\Component\Filesystem\Filesystem;
+use Timpack\TvshowTracker\Tv\Helper\Helper;
 
 class Vault
 {
